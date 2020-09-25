@@ -5,18 +5,16 @@ import {
     Route
 } from "react-router-dom";
 import { LoginScreen } from '../components/login/LoginScreen';
-import { Marvel } from '../components/marvel/Marvel';
-import { Navbar } from '../components/ui/Navbar';
+import { DashBoardRoutes } from './DashBoardRoutes';
 
 export const AppRouter = () => {
     return (
         <Router>
             <div>
-                <Navbar/>
                 <Switch>
                     <Route exact path="/login" component={ LoginScreen }/> 
                     
-                    <Route exact path="/marvel" component={ Marvel }/> 
+                    <Route path="/" component={ DashBoardRoutes }/> 
                 </Switch>
             </div>
         </Router>
