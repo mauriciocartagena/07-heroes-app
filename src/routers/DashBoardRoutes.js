@@ -9,7 +9,8 @@ import { Navbar } from '../components/ui/Navbar';
 export const DashBoardRoutes = () => {
     return (
         <>
-            <Navbar/>
+            <Navbar />
+
             <div className='container mt-2' >
                 <Switch>
                     <Route exact path="/marvel"  component={ MarvelScreen } />
