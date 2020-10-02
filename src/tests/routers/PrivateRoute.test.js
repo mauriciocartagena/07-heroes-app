@@ -13,6 +13,8 @@ describe('Prueba en <PrivateRoute/>', () => {
             }
         }
 
+        Storage.prototype.setItem =  jest.fn();
+
         const  wrapper = mount(
             <MemoryRouter>
                 <PrivateRoute
@@ -24,6 +26,7 @@ describe('Prueba en <PrivateRoute/>', () => {
             </MemoryRouter>           
         );
         expect( wrapper.find('span').exists() ).toBe( true );
+        expect( localStorage.setItem ).toHaveBeenCalledWith('lastPath','/marvel');
         
     });
     
